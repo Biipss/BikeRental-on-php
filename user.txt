@@ -1,0 +1,42 @@
+CREATE TABLE users(
+    uID int NOT NULL AUTO_INCREMENT,
+    FullName varchar(30),
+    Username varchar(19),
+    Email varchar(50),
+    Password varchar(16),
+    uType varchar(19),
+    PRIMARY KEY(uID),
+    UNIQUE KEY(Username),
+    UNIQUE KEY(Email)
+);
+
+//contact
+CREATE TABLE contact(
+    Name varchar(50),
+    Email varchar(100),
+    Subject varchar(200),
+    Message varchar(500)
+);
+
+//book
+CREATE TABLE book(
+    ID int AUTO_INCREMENT PRIMARY KEY,
+    `FullName` text,
+    `Mobile Number` text,
+    `Email` text,
+    `Arriving Date` text,
+    `Hiring Detail` text,
+    `Payment` text
+);
+
+//product
+CREATE TABLE Products(
+    pID INT NOT NULL AUTO_INCREMENT,
+    pImage varchar(255),
+    pTitle varchar(50),
+    pModel varchar(50),
+    pMileage varchar(50),
+    pPrice DOUBLE,
+    PRIMARY KEY(pID),
+    UNIQUE KEY(pTitle)
+);
